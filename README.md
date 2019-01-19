@@ -1,6 +1,6 @@
 ## Lucky Draw
 
-This class takes an example array (format is given in index file will also be explained below) and generates Item and Item count for winners.
+This class takes an example array (format is given in example file, will also be explained below) and generates Item and Item count for winners.
 
 ### Caution
 

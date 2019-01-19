@@ -24,6 +24,13 @@ Example available in example.php file.
 ```
 in above amount example keys mean the item count and the values means the probability.
 
+#### Getting/Processing the Result
+```markdown
+list($p,$c)=chancedGift::get($prizes);
+```
+
+From above example, _$p_ will be the Item Code and _$c_ will be the number of gifts.
+
 ### Support
 
 Having trouble? Create an issue!

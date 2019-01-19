@@ -16,7 +16,7 @@ Example available in index.php file.
     'chances'=>1,
     'amounts'=>[rand(1,100)]
 ]
-```markdown
+```
 
 - **item**: Provide your item's unique identifier (for example I have used HTML Text)
 - **chances**: Weight of item. It will be compared along all the items in array. The higher the chances the greater the chances of getting the item.
@@ -25,7 +25,7 @@ Example available in index.php file.
 [
     'amounts'=>[1=>100,5=>50,10=>10,20=>5]
 ]
-```markdown
+```
 in above amount example keys mean the item count and the values means the probability.
 
 ### Support

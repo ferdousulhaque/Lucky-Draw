@@ -22,7 +22,7 @@ Example available in example.php file.
 ```markdown
     'amounts'=>[1=>100,5=>50,10=>10,20=>5]
 ```
-in above amount example keys mean the item count and the values means the probability.
+in above amount example, keys mean the item count and the values mean the probability.
 
 #### Getting/Processing the Result
 ```markdown

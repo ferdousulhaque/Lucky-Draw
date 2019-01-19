@@ -26,7 +26,7 @@ in above amount example keys mean the item count and the values means the probab
 
 #### Getting/Processing the Result
 ```markdown
-list($p,$c)=chancedGift::get($prizes);
+list($p,$c)=luckyDraw::get($prizes);
 ```
 
 From above example, _$p_ will be the Item Code and _$c_ will be the item count.

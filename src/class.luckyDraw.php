@@ -1,3 +1,4 @@
+<?php
 class luckyDraw {
     public static function get(array $items) {
         $chances = array_column($items,'chances','item');

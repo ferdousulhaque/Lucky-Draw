@@ -1,3 +1,4 @@
+<?php
 require('src/class.luckyDraw.php');
 $prizes=[
     [

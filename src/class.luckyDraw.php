@@ -7,8 +7,10 @@ class luckyDraw {
         foreach($items as $item){
             if(!isset($item['item'])||!isset($item['chances'])||!isset($item['amounts'])){
                 throw new \InvalidArgumentException('Required keys(item,chances,amounts) not present with all items!');
-            } elseif(!is_int($item['chances'])||!is_array($item['amounts'])){
-                throw new \UnexpectedValueException('Chances should be an Integer value and amounts should be a formatted array!');
+            } elseif(!is_int($item['chances'])){
+                throw new \UnexpectedValueException('Chances should be an Integer value!');
+            } elseif(!is_array($item['amounts'])){
+                throw new \UnexpectedValueException('Amounts should be a formatted array!');
             }
         }
         return self::gift($items);
@@ -20,7 +22,6 @@ class luckyDraw {
         $count = self::generate($amounts);
         return [$item,$count];
     }
-
     private static function generate($items) {
         if(count($items)==1) return $items[0];
         $rand = mt_rand(1, (int) array_sum($items));

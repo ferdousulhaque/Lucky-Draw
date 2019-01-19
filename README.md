@@ -29,7 +29,7 @@ in above amount example keys mean the item count and the values means the probab
 list($p,$c)=chancedGift::get($prizes);
 ```
 
-From above example, _$p_ will be the Item Code and _$c_ will be the number of gifts.
+From above example, _$p_ will be the Item Code and _$c_ will be the item count.
 
 ### Support
 

@@ -1,4 +1,4 @@
-require('class.luckyDraw.php');
+require('src/class.luckyDraw.php');
 $prizes=[
     [
         'item'=>'<span style="color:green">No Gift</span>',

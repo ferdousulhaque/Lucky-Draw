@@ -8,7 +8,7 @@ Please don't use this to generate things/prizes for their hard earned money. It 
 
 ### Usage
 
-Example available in index.php file.
+Example available in example.php file.
 
 ```markdown
     'item'=>'<span style="color:red">Bag</span>',

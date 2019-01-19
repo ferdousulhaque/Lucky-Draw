@@ -10,8 +10,7 @@ Please don't use this to generate things/prizes for their hard earned money. It 
 
 Example available in index.php file.
 
-```markdown
-[
+```markdown[
     'item'=>'<span style="color:red">Bag</span>',
     'chances'=>1,
     'amounts'=>[rand(1,100)]
@@ -21,8 +20,7 @@ Example available in index.php file.
 - **item**: Provide your item's unique identifier (for example I have used HTML Text)
 - **chances**: Weight of item. It will be compared along all the items in array. The higher the chances the greater the chances of getting the item.
 - **amounts**: Array of Item amount. It can be a (randomized/single) value or can be a array like,
-```markdown
-[
+```markdown[
     'amounts'=>[1=>100,5=>50,10=>10,20=>5]
 ]
 ```

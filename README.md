@@ -1,37 +1,33 @@
-## Welcome to GitHub Pages
+## Lucky Draw
 
-You can use the [editor on GitHub](https://github.com/abmmhasan/Lucky-Draw/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This class takes an example array (format is given in index file will also be explained below) and generates Item and Item count for winners.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Caution
 
-### Markdown
+Please don't use this to generate things/prizes for their hard earned money. It is only intended to make things fun with bonus gifts only.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Usage
+
+Example available in index.php file.
 
 ```markdown
-Syntax highlighted code block
+[
+    'item'=>'<span style="color:red">Bag</span>',
+    'chances'=>1,
+    'amounts'=>[rand(1,100)]
+]
+```markdown
 
-# Header 1
-## Header 2
-### Header 3
+- **item**: Provide your item's unique identifier (for example I have used HTML Text)
+- **chances**: Weight of item. It will be compared along all the items in array. The higher the chances the greater the chances of getting the item.
+- **amounts**: Array of Item amount. It can be a (randomized/single) value or can be a array like,
+```markdown
+[
+    'amounts'=>[1=>100,5=>50,10=>10,20=>5]
+]
+```markdown
+in above amount example keys mean the item count and the values means the probability.
 
-- Bulleted
-- List
+### Support
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/abmmhasan/Lucky-Draw/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Having trouble? Create an issue!

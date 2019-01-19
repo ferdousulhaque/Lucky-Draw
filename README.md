@@ -11,12 +11,12 @@ Please don't use this to generate things/prizes for People's hard earned money. 
 Example available in example.php file.
 
 ```markdown
-    'item'=>'<span style="color:red">Bag</span>',
-    'chances'=>1,
-    'amounts'=>[rand(1,100)]
+    'item'=> 874545,
+    'chances'=> 1,
+    'amounts'=> [rand(1,100)]
 ```
 
-- **item**: Provide your item's unique identifier (for example I have used HTML Text)
+- **item**: Provide your item's unique identifier
 - **chances**: Weight of item. It will be compared along all the items in array. The higher the chances the greater the chances of getting the item.
 - **amounts**: Array of Item amount. It can be a (randomized/single) value or can be a array like,
 ```markdown

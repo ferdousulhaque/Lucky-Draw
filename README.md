@@ -4,7 +4,7 @@ This class takes an example array (format is given in index file will also be ex
 
 ### Caution
 
-Please don't use this to generate things/prizes for their hard earned money. It is only intended to make things fun with bonus gifts only.
+Please don't use this to generate things/prizes for People's hard earned money. It is only intended to make things fun with bonus gifts only.
 
 ### Usage
 

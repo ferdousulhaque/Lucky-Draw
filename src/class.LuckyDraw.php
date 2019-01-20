@@ -12,8 +12,8 @@ class LuckyDraw {
         foreach($items as $item){
             if(!isset($item['item'])||!isset($item['chances'])||!isset($item['amounts'])){
                 throw new \InvalidArgumentException('Required keys(item,chances,amounts) not present with all items!');
-            } elseif(!is_int($item['chances'])){
-                throw new \UnexpectedValueException('Chances should be an Integer value!');
+            } elseif(!is_numeric($item['chances'])&&!is_string($item['chances'])){
+                throw new \UnexpectedValueException('Chances should be a single Quoted Integer value!');
             } elseif(!is_array($item['amounts'])){
                 throw new \UnexpectedValueException('Amounts should be a formatted array!');
             }
@@ -29,7 +29,14 @@ class LuckyDraw {
     }
     private static function generate($items) {
         if(count($items)==1) return $items[0];
-        $rand = mt_rand(1, (int) array_sum($items));
+        $min=min($items);$multiplier=1;
+        if ((int) $min != $min) {
+            $multiplier=str_pad(1,strlen(explode(".",$min)[1])+1,'0');
+            $items=array_combine(array_keys($items),array_map('bcmul', $items, array_fill(0, count($items), $multiplier)));
+        }
+        if(array_sum($items)>mt_getrandmax()||array_sum($items)<0)
+            throw new \UnexpectedValueException('Chances out of range!');
+        $rand = mt_rand(1, (int)array_sum($items));
         foreach ($items as $key => $value) {
             $rand -= $value;
             if ($rand <= 0) {

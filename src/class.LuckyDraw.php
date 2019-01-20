@@ -1,8 +1,9 @@
 <?php
 class LuckyDraw {
     /**
-     * @param array $items
+     * @param array $items, the list of items
      * @return array with Item Code/Name and Item Counter
+     * @exception If required keys not present/values for the keys are not properly formatted
      */
     public static function get(array $items) {
         if(count($items)<1){

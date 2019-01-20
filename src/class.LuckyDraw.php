@@ -1,5 +1,9 @@
 <?php
-class luckyDraw {
+class LuckyDraw {
+    /**
+     * @param array $items
+     * @return array with Item Code/Name and Item Counter
+     */
     public static function get(array $items) {
         if(count($items)<1){
             throw new \LengthException('Invalid number of items!');

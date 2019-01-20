@@ -41,7 +41,7 @@ class LuckyDraw {
         foreach ($items as $key => $value) {
             $rand -= $value;
             if ($rand <= 0) {
-                $return = $key;
+                return $key;
             }
         }
         return $return;

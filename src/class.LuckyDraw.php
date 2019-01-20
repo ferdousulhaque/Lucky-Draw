@@ -30,18 +30,20 @@ class LuckyDraw {
     private static function generate($items) {
         if(count($items)==1) return $items[0];
         $min=min($items);
+        $return = array_search(max($items), $items);
         if ((int) $min != $min) {
             $multiplier=str_pad(1,strlen(explode(".",$min)[1])+1,'0');
             $items=array_combine(array_keys($items),array_map('bcmul', $items, array_fill(0, count($items), $multiplier)));
         }
-        if(array_sum($items)>mt_getrandmax()||array_sum($items)<0)
+        if(array_sum($items)>mt_getrandmax()||array_sum($items)<1)
             throw new \UnexpectedValueException('Chances(Item/Amount) out of range!');
         $rand = mt_rand(1, array_sum($items));
         foreach ($items as $key => $value) {
             $rand -= $value;
             if ($rand <= 0) {
-                return $key;
+                $return = $key;
             }
         }
+        return $return;
     }
 }

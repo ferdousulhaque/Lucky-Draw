@@ -35,7 +35,7 @@ class LuckyDraw {
             $items=array_combine(array_keys($items),array_map('bcmul', $items, array_fill(0, count($items), $multiplier)));
         }
         if(array_sum($items)>mt_getrandmax()||array_sum($items)<0)
-            throw new \UnexpectedValueException('Chances out of range!');
+            throw new \UnexpectedValueException('Chances(Item/Amount) out of range!');
         $rand = mt_rand(1, (int)array_sum($items));
         foreach ($items as $key => $value) {
             $rand -= $value;

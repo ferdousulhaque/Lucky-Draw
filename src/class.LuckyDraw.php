@@ -12,7 +12,7 @@ class LuckyDraw {
         foreach($items as $item){
             if(!isset($item['item'])||!isset($item['chances'])||!isset($item['amounts'])){
                 throw new \InvalidArgumentException('Required keys(item,chances,amounts) not present with all items!');
-            } elseif(!is_numeric($item['chances'])){
+            } elseif(!is_numeric($item['chances'])){ //Enable fixed Decimal places
                 throw new \UnexpectedValueException('Chances should be a number(integer/float)!');
             } elseif(!is_array($item['amounts'])){
                 throw new \UnexpectedValueException('Amounts should be a formatted array!');

@@ -20,6 +20,9 @@ Example available in example.php file.
 - **chances**: Weight of item. It will be compared along all the items in array. The higher the chances the greater the chances of getting the item.
 - **amounts**: Array of Item amount. It can be a (randomized/single) value or can be a array like,
 ```markdown
+    'amounts'=>[rand(1-10)=>100,rand(11-30)=>50,rand(31-60)=>10,rand(61-200)=>5]
+```
+```markdown
     'amounts'=>[1=>100,5=>50,10=>10,20=>5]
 ```
 in above amount example, keys mean the item count and the values mean the probability.

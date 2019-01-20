@@ -29,7 +29,7 @@ class LuckyDraw {
     }
     private static function generate($items) {
         if(count($items)==1) return $items[0];
-        $min=min($items);$multiplier=1;
+        $min=min($items);
         if ((int) $min != $min) {
             $multiplier=str_pad(1,strlen(explode(".",$min)[1])+1,'0');
             $items=array_combine(array_keys($items),array_map('bcmul', $items, array_fill(0, count($items), $multiplier)));

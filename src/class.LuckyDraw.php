@@ -9,19 +9,30 @@ class LuckyDraw {
         if(count($items)<1){
             throw new \LengthException('Invalid number of items!');
         }
+        $length=0;
         foreach($items as $item){
             if(!isset($item['item'])||!isset($item['chances'])||!isset($item['amounts'])){
                 throw new \InvalidArgumentException('Required keys(item,chances,amounts) not present with all items!');
-            } elseif(!is_numeric($item['chances'])){ //Enable fixed Decimal places
+            } elseif(!is_numeric($item['chances'])){
                 throw new \UnexpectedValueException('Chances should be a number(integer/float)!');
             } elseif(!is_array($item['amounts'])){
                 throw new \UnexpectedValueException('Amounts should be a formatted array!');
             }
+            if ((int) $item['chances'] != $item['chances']) {
+                $fraction=strlen(explode(".",$item['chances'])[1])+1;
+                if($fraction>$length)$length=$fraction;
+            }
         }
-        return self::gift($items);
+        return self::gift($items,$length);
     }
-    private static function gift($items) {
+    private static function gift($items,$length) {
         $chances = array_column($items,'chances','item');
+        if($length>0)
+            $chances=array_combine(
+                array_keys($chances),
+                array_map('bcmul', $chances, 
+                array_fill(0, count($chances), 
+                str_pad(1,$length,'0'))));
         $item = self::generate($chances);
         $amounts = $items[array_search($item, array_column($items, 'item'))]['amounts'];
         $count = self::generate($amounts);
@@ -30,11 +41,6 @@ class LuckyDraw {
     private static function generate($items) {
         if(count($items)==1) return $items[0];
         $min=min($items);
-        $return = array_search(max($items), $items);
-        if ((int) $min != $min) {
-            $multiplier=str_pad(1,strlen(explode(".",$min)[1])+1,'0');
-            $items=array_combine(array_keys($items),array_map('bcmul', $items, array_fill(0, count($items), $multiplier)));
-        }
         if(array_sum($items)>mt_getrandmax()||array_sum($items)<1)
             throw new \UnexpectedValueException('Chances(Item/Amount) out of range!');
         $rand = mt_rand(1, (int)array_sum($items));
@@ -44,6 +50,6 @@ class LuckyDraw {
                 return $key;
             }
         }
-        return $return;
+        return array_search(max($items), $items);
     }
 }

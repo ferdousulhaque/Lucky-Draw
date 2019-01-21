@@ -17,7 +17,7 @@ Example available in example.php file.
 ```
 
 - **item**: Provide your item's unique identifier
-- **chances**: Weight of item(Fraction Supported). It will be compared along all the items in array. The higher the chances the greater the chances of getting the item.
+- **chances**: Weight of item (fraction Supported). It will be compared along all the items in array. The higher the chances the greater the chances of getting the item.
 - **amounts**: Array of Item amount. It can be a (randomized/single) value or can be a array like,
 ```markdown
     'amounts'=>[
@@ -30,7 +30,7 @@ Example available in example.php file.
 ```markdown
     'amounts'=>[1=>100,5=>50,10=>10,20=>5]
 ```
-in above amount example, keys mean the item count and the values mean the probability(fraction not supported).
+in above amount example, keys mean the item count and the values mean the probability (fraction not supported).
 
 #### Getting/Processing the Result
 ```markdown

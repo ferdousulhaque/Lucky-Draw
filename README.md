@@ -20,7 +20,7 @@ Example available in example.php file.
 - **chances**: Weight of item (fraction Supported). It will be compared along all the items in array. The higher the chances the greater the chances of getting the item.
 - **amounts**: Array of Item amount. It can be a (randomized/single) value or can be a array like,
 ```markdown
-    'amounts'=>[
+    'amounts'=> [
         rand(1-10)=>100,
         rand(11-30)=>50,
         rand(31-60)=>10,

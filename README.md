@@ -16,23 +16,23 @@ Language: PHP 7.2+
 $prizes=
     [
         [
-            'item'=>'product_code_000_NoLuck',	// Item code or Identifier
-            'chances'=>'100000',			    // Item Chances
-            'amounts'=>[1]				        // Item Amounts
+            'item'=>'product_code_000_NoLuck',  // Item code or Identifier
+            'chances'=>'100000',                // Item Chances
+            'amounts'=>[1]                      // Item Amounts
         ],
         [
             'item'=>'product_code_001',
             'chances'=>'1000',
-            'amounts'=>[rand(1,100)]	    	// Random Value passing
+            'amounts'=>[rand(1,100)]            // Random Value passing
         ],
         [
             'item'=>'product_code_002',
-            'chances'=>'500.001',		    	// Fraction Allowed
+            'chances'=>'500.001',               // Fraction Allowed
             'amounts'=>[
-                1=>100,				            // Amount chances
-                5=>50,				        	// Format: Amount => Chances
-                10=>10,				            // Fraction Not allowed
-                rand(50-60)=>1,		        	// Random Value in Amount
+                1=>100,                         // Amount chances
+                5=>50,                          // Format: Amount => Chances
+                10=>10,                         // Fraction Not allowed
+                rand(50-60)=>1,                 // Random Value in Amount
             ]
         ],
         [
@@ -46,7 +46,7 @@ $prizes=
 ### Output Data
 
 ```markdown
-    product_code_000_NoLuck (1)                // Item Code and Amount
+    product_code_000_NoLuck (1)                 // Item Code and Amount
 ```
 
 ### Usage

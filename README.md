@@ -63,7 +63,7 @@ From above example, _$p_ will be the Item Code and _$c_ will be the item count.
             'chances'=>'1',
             'amounts'=>[1]
         ],
-    ];
+    ]
 ```
 
 ### Output Data

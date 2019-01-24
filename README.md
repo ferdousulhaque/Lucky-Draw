@@ -8,7 +8,7 @@ Please don't use this to generate things/prizes for People's hard earned money. 
 
 ### Prerequisits
 
-Language: PHP 7.2+
+Language: PHP 7+
 
 ### Usage
 - **item**: Provide your item's unique identifier

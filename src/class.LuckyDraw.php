@@ -25,6 +25,10 @@ class LuckyDraw {
         }
         return self::gift($items,$length);
     }
+    private static function numSequence($array){
+        if(!array_key_exists(0,$array))return false;
+        return array_keys($array) === range(0, count($array) - 1);
+    }
     private static function gift($items,$length) {
         $chances = array_column($items,'chances','item');
         if($length>0)
@@ -35,7 +39,11 @@ class LuckyDraw {
                 str_pad(1,$length,'0'))));
         $item = self::generate($chances);
         $amounts = $items[array_search($item, array_column($items, 'item'))]['amounts'];
-        $count = self::generate($amounts);
+        if(self::numSequence($amounts)){
+            $count = $amounts[rand(0,count($amounts) - 1)];
+        } else { 
+            $count = self::generate($amounts);
+        }
         return [$item,$count];
     }
     private static function generate($items) {

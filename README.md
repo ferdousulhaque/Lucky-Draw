@@ -37,7 +37,7 @@ Language: PHP 7+
     [
         'item'=>'product_code_004',
         'chances'=>'1',
-        'amounts'=>[1]
+        'amounts'=>[10,15,30,50]            // Amount without probability
     ],
 ]
 ```
@@ -53,16 +53,25 @@ Language: PHP 7+
     - Can be weighted amount, i.e.    
         ```php
         [
-            rand(1,10)=>100,    // Here Amount => Chance
+            5=>100,
             15=>50,
             50=>10,
-            rand(61,200)=>5
+            80=>5
         ]
-        ```        
+        ```      
+    - We can also pass random single value, i.e. [ 50-100 ] in above amount part using rand() or mt_rand().       
         ```php
-        [1=>100,5=>50,10=>10,20=>5]
-        ```        
-    - We can also pass random single value, i.e. [ 1-100 ] in above amount part using rand() or mt_rand().
+        [
+            1=>100,
+            5=>50,
+            10=>10,
+            rand(50,100)=>5
+        ]
+        ```
+    - Or can be selective amount for random pick
+         ```php
+        [ 10, 15, 30, 50, 90]
+        ```
 
 ### Output Data
 

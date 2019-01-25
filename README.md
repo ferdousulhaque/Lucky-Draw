@@ -47,7 +47,6 @@ Language: PHP 7+
     - The higher the chances the greater the chances of getting the item.
     - Fraction number supported
     - In case of active inventory we can pass available item stock here
-    - For “No Luck” part we can set a bigger value (As in Chewn Chewn we have MyTelenor total probable coupon amounts)
 - **amounts**: Array of Item amount. It can be any like following:
     - Single Value, i.e. [ 1 ] or random single value, i.e. [ 1-100 ]
     - Fraction number not supported

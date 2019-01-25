@@ -2,13 +2,13 @@
 
 This class takes an example array (format is given in example file, will also be explained below) and generates Item and Item count for winners.
 
-## Caution
-
 > Please don't use this to generate things/prizes with People's hard earned money. It is only intended to make things fun with bonus gifts only.
 
 ## Prerequisits
 
 Language: PHP 7+
+
+## Usage
 
 ### Input Data
 

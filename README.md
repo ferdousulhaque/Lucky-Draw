@@ -68,11 +68,13 @@ Language: PHP 7+
 ### Output Data
 
 ```markdown
-    product_code_000_NoLuck (1)                 // Item Code and Amount
+product_code_000_NoLuck (1)                 // Item Code and Amount
 ```
+
 ```php
 list($p,$c)=luckyDraw::get($prizes);
 ```
+
 - We will pass the Formatted Input i.e. $prizes
 - From above example, (after execution) $p will be the Item Code and $c will be the item count.
 

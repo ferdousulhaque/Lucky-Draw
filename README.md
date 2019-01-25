@@ -51,8 +51,7 @@ Language: PHP 7+
 - **amounts**: Array of Item amount. It can be any like following:
     - Single Value, i.e. [ 1 ] or random single value, i.e. [ 1-100 ]
     - Fraction number not supported
-    - Can be weighted amount, i.e.
-    
+    - Can be weighted amount, i.e.    
         ```php
         [
             rand(1-10)=>100,    // Here Amount => Chance
@@ -60,12 +59,10 @@ Language: PHP 7+
             50=>10,
             rand(61-200)=>5
         ]
-        ```
-        
+        ```        
         ```php
         [1=>100,5=>50,10=>10,20=>5]
-        ```
-        
+        ```        
     - We can also pass random single value, i.e. [ 1-100 ] in above amount part.
 
 ### Output Data

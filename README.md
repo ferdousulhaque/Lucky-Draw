@@ -62,7 +62,7 @@ Language: PHP 7+
         ```php
         [1=>100,5=>50,10=>10,20=>5]
         ```        
-    - We can also pass random single value, i.e. [ 1-100 ] in above amount part.
+    - We can also pass random single value, i.e. [ 1-100 ] in above amount part using rand() or mt_rand().
 
 ### Output Data
 

@@ -83,6 +83,6 @@ There is some risks regarding the generation.
 - Available Stock should be passed (after subtracting used amount from stock amount) in chances properly.
 - If Available Stock become Nil, it is better to remove it from the array. Also setting chances to 0 (zero) will work too.
 
-### Support
+## Support
 
 Having trouble? Create an issue!

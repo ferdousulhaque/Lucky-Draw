@@ -13,33 +13,33 @@ Language: PHP 7+
 ### Input Data
 
 ```php
+[
     [
-        [
-            'item'=>'product_code_000_NoLuck',  // Item code or Identifier
-            'chances'=>'100000',                // Item Chances
-            'amounts'=>[1]                      // Item Amounts
-        ],
-        [
-            'item'=>'product_code_001',
-            'chances'=>'1000',
-            'amounts'=>[rand(1,100)]            // Random Value passing
-        ],
-        [
-            'item'=>'product_code_002',
-            'chances'=>'500.001',               // Fraction Allowed
-            'amounts'=>[
-                1=>100,                         // Amount chances
-                5=>50,                          // Format: Amount => Chances
-                10=>10,                         // Fraction Not allowed
-                rand(50-60)=>1,                 // Random Value in Amount
-            ]
-        ],
-        [
-            'item'=>'product_code_004',
-            'chances'=>'1',
-            'amounts'=>[1]
-        ],
-    ]
+        'item'=>'product_code_000_NoLuck',  // Item code or Identifier
+        'chances'=>'100000',                // Item Chances
+        'amounts'=>[1]                      // Item Amounts
+    ],
+    [
+        'item'=>'product_code_001',
+        'chances'=>'1000',
+        'amounts'=>[rand(1,100)]            // Random Value passing
+    ],
+    [
+        'item'=>'product_code_002',
+        'chances'=>'500.001',               // Fraction Allowed
+        'amounts'=>[
+            1=>100,                         // Amount chances
+            5=>50,                          // Format: Amount => Chances
+            10=>10,                         // Fraction Not allowed
+            rand(50-60)=>1,                 // Random Value in Amount
+        ]
+    ],
+    [
+        'item'=>'product_code_004',
+        'chances'=>'1',
+        'amounts'=>[1]
+    ],
+]
 ```
 - **item**: Provide your item's unique identifier
 - **chances**: Weight of item. 

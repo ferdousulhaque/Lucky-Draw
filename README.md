@@ -31,7 +31,7 @@ Language: PHP 7+
             1=>100,                         // Amount chances
             5=>50,                          // Format: Amount => Chances
             10=>10,                         // Fraction Not allowed
-            rand(50-60)=>1,                 // Random Value in Amount
+            rand(50,60)=>1,                 // Random Value in Amount
         ]
     ],
     [
@@ -53,10 +53,10 @@ Language: PHP 7+
     - Can be weighted amount, i.e.    
         ```php
         [
-            rand(1-10)=>100,    // Here Amount => Chance
+            rand(1,10)=>100,    // Here Amount => Chance
             15=>50,
             50=>10,
-            rand(61-200)=>5
+            rand(61,200)=>5
         ]
         ```        
         ```php

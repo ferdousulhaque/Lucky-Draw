@@ -41,6 +41,7 @@ Language: PHP 7+
     ],
 ]
 ```
+
 - **item**: Provide your item's unique identifier
 - **chances**: Weight of item. 
     - It will be compared along all the items in array. 

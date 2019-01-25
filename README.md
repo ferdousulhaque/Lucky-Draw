@@ -37,7 +37,7 @@ Language: PHP 7+
     [
         'item' => 'product_code_004',
         'chances' => '1',
-        'amounts' => [ 10, 15, 30, 50 ]            // Amount without probability
+        'amounts' => [ 10, 15, 30, 50 ]     // Amounts without probability
     ],
 ]
 ```
@@ -70,7 +70,7 @@ Language: PHP 7+
         ```
     - Or can be selective amount for random pick
          ```php
-        [ 10, 15, 30, 50, 90]
+        [ 10, 15, 30, 50, 90 ]
         ```
 
 ### Output Data

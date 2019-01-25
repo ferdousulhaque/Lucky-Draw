@@ -15,8 +15,8 @@ Language: PHP 7+
 ```php
 [
     [
-        'item' => 'product_code_000_NoLuck',  // Item code or Identifier
-        'chances' => '100000',                // Item Chances
+        'item' => 'product_code_000_NoLuck',    // Item code or Identifier
+        'chances' => '100000',                  // Item Chances
         'amounts '=> [ 1 ]                      // Item Amounts
     ],
     [
@@ -26,18 +26,18 @@ Language: PHP 7+
     ],
     [
         'item' => 'product_code_002',
-        'chances' => '500.001',               // Fraction Allowed
+        'chances' => '500.001',                 // Fraction Allowed
         'amounts' => [
-            1 => 100,                         // Amount chances
-            5 => 50,                          // Format: Amount => Chances
-            10 => 10,                         // Fraction Not allowed
-            rand(50,60) => 1,                 // Random Value in Amount
+            1 => 100,                           // Amount chances
+            5 => 50,                            // Format: Amount => Chances
+            10 => 10,                           // Fraction Not allowed
+            rand(50,60) => 1,                   // Random Value in Amount
         ]
     ],
     [
         'item' => 'product_code_004',
         'chances' => '1',
-        'amounts' => [ 10, 15, 30, 50 ]     // Amounts without probability
+        'amounts' => [ 10, 15, 30, 50 ]         // Amounts without probability
     ],
 ]
 ```
@@ -59,7 +59,7 @@ Language: PHP 7+
             80 => 5
         ]
         ```      
-    - We can also pass random single value, i.e. [ 50-100 ] in above amount part using rand() or mt_rand().       
+    - We can also pass random single value, i.e. [ 50-100 ] in amount part using rand() or mt_rand().       
         ```php
         [
             1 => 100,

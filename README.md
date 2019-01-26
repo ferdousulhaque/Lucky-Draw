@@ -44,7 +44,7 @@ Language: PHP 7+
 
 - **item**: Provide your item's unique identifier
 
-- **chances**: Weight of item. 
+- **chances**: Weight of item.
     - It will be compared along all the items in array. 
     - The higher the chances the greater the chances of getting the item.
     - Fraction number supported

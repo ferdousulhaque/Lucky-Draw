@@ -92,8 +92,8 @@ list( $p, $c ) = luckyDraw::get($prizes);
 ## Risks & Solutions
 
 There is some risks regarding the generation.
-- Available Stock should be passed (after subtracting used amount from stock amount) in chances properly.
-- If Available Stock become Nil, it is better to remove it from the array. Setting chances to 0 (zero) will work too.
+- Available stock should be passed (after subtracting used amount from stock amount) in chances properly (if it is mainitained with inventory).
+- If available stock become Nil, it is better to remove it from the array or can set chance to 0 (zero).
 
 ## Support
 

@@ -15,29 +15,29 @@ Language: PHP 7+
 ```php
 [
     [
-        'item' => 'product_code_000_NoLuck',    // Item code or Identifier
-        'chances' => '100000',                  // Item Chances
-        'amounts '=> [ 1 ]                      // Item Amounts
+        'item' => 'product_000_NoLuck', // Item code or Identifier
+        'chances' => '100000',          // Item Chances
+        'amounts '=> [ 1 ]              // Item Amounts
     ],
     [
-        'item' => 'product_code_001',
+        'item' => 'product_001',
         'chances' => '1000',
-        'amounts' => [ rand(1,100) ]            // Random Value passing
+        'amounts' => [ rand(1,100) ]    // Random Value passing
     ],
     [
-        'item' => 'product_code_002',
-        'chances' => '500.001',                 // Fraction Allowed
+        'item' => 'product_002',
+        'chances' => '500.001',         // Fraction Allowed
         'amounts' => [
-            1 => 100,                           // Amount chances
-            5 => 50,                            // Format: Amount => Chances
-            10 => 10,                           // Fraction Not allowed
-            rand(50,60) => 1,                   // Random Value in Amount
+            1 => 100,                   // Amount chances
+            5 => 50,                    // Format: Amount => Chances
+            10 => 10,                   // Fraction Not allowed
+            rand(50,60) => 1,           // Random Value in Amount
         ]
     ],
     [
-        'item' => 'product_code_004',
+        'item' => 'product_004',
         'chances' => '1',
-        'amounts' => [ 10, 15, 30, 50 ]         // Amounts without probability
+        'amounts' => [ 10, 15, 30, 50 ] // Amounts without probability
     ],
 ]
 ```
@@ -77,7 +77,7 @@ Language: PHP 7+
 ### Output Data
 
 ```markdown
-product_code_000_NoLuck (1)                 // Item Code and Amount
+product_000_NoLuck (1)                 // Item Code and Amount
 ```
 
 ```php

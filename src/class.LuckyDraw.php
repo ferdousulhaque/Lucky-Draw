@@ -39,7 +39,9 @@ class LuckyDraw {
                 str_pad(1,$length,'0'))));
         $item = self::generate($chances);
         $amounts = $items[array_search($item, array_column($items, 'item'))]['amounts'];
-        if(self::numSequence($amounts)){
+        if(count($amounts)==1) {
+            $count = $amounts[0];
+        } elseif(self::numSequence($amounts)) {
             $count = $amounts[rand(0,count($amounts)-1)];
         } else { 
             $count = self::generate($amounts);

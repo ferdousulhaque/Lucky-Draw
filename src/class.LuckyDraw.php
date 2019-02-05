@@ -48,7 +48,7 @@ class LuckyDraw {
     }
     private static function generate($items) {
         if(count($items)==1) return $items[0];
-        $min=min($items);$sum=array_sum($items);
+        $sum=array_sum($items);
         if($sum>mt_getrandmax()||$sum<1)
             throw new \UnexpectedValueException('Chances(Item/Amount) out of range!');
         $rand = mt_rand(1, (int)$sum);
